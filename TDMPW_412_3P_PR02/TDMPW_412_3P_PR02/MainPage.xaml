@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_412_3P_PR02.MainPage"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <Grid RowDefinitions=".10*, .20*, .70*" ColumnDefinitions=".25*, .25*, .25*, .25*">
+            <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Offset="0.0" Color="#051937"/>
+                <GradientStop Offset="0.23" Color="#0400ff"/>
+                <GradientStop Offset="0.55" Color="#28db55"/>
+                <GradientStop Offset="0.86" Color="#605fab"/>
+                <GradientStop Offset="0.0" Color="#790975"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+            <Frame Grid.Row="0" Grid.ColumnSpan="4" Margin="10,70,10,0" HeightRequest="80" HasShadow="True" BorderColor="Transparent" BackgroundColor="LightGoldenrodYellow">
+            <Label Text="✅ To-Do List ✅"
+                   FontFamily="Encabezado"
+                   x:Name="lblTitle"
+                   Margin="0,0,0,0"
+                   Grid.Row="0"
+                   FontSize="35"
+                   FontAttributes="Bold"
+                   Grid.ColumnSpan="4"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   />
+                </Frame>
+            <Entry Grid.Row="1"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   Margin="10,40,10,0"
+                   VerticalOptions="Center"
+                   Placeholder="Escribe una tarea"
+                   PlaceholderColor="DarkGray"
+                   x:Name="txtTarea"
+                   BackgroundColor="White"
+                   />
+            <Button Grid.Row="1"
+                    Grid.Column="3"
+                    Grid.ColumnSpan="1"
+                    CornerRadius="22"
+                    Margin="10,40,10,0"
+                    Text="Agregar"
+                    FontFamily="Helvetica Neu"
+                    FontAttributes="Bold"
+                    FontSize="13"
+                    VerticalOptions="Center"
+                    x:Name="btnAgregar"
+                    Clicked="btnAgregar_Clicked"
+                    BackgroundColor="Gold"
+                    TextColor="Black"/>
+            <Frame Grid.Row="2"
+                   Grid.ColumnSpan="4"
+                   Margin="10"
+                   HasShadow="True"
+                   BorderColor="Transparent">
+                <ListView x:Name="listaTareas"
+                          BackgroundColor="Transparent"
+                          SeparatorColor="Silver"
+                          Grid.Row="2"
+                          Grid.ColumnSpan="4"
+                          RowHeight="65"
+                          ItemsSource="{Binding ToDoList}"
+                          >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid RowDefinitions=".33*, .33*, .33*" ColumnDefinitions=".8*, .15*, .15*">
+                                    <Label Grid.Row="0"
+                                           Grid.Column="0"
+                                           Grid.ColumnSpan="1"
+                                           Text="{Binding tarea}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"
+                                           Margin="20,33,0,0"
+                                           FontFamily="Helvetica Neu"
+                                           FontAttributes="Bold"
+                                           FontSize="14"
+                                           x:Name="lblPrincipal">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label"
+                                                        Binding="{Binding IsTachado}"
+                                                        Value="True">
+                                            <Setter Property="TextDecorations"
+                                                    Value="Strikethrough" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label> 
+                                    <Label Grid.Row="1"
+                                           Grid.Column="0"
+                                           Text="{Binding status}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"
+                                           Margin="20,40,0,0"
+                                           FontFamily="Helvetica Neu"
+                                           FontAttributes="None"
+                                           FontSize="12"
+                                           TextColor="DarkGray"
+                                           x:Name="lblStatus"
+                                           />
+                                    <Label Grid.Row="0"
+                                           Grid.Column="0"
+                                           Grid.ColumnSpan="1"
+                                           Text="{Binding fecha}"
+                                           HorizontalOptions="Start"
+                                           VerticalOptions="Center"
+                                           Margin="20,-5,0,0"
+                                           FontFamily="Helvetica Neu"
+                                           FontAttributes="None"
+                                           FontSize="10"
+                                           TextColor="DarkGray"
+                                           x:Name="lblFecha"/>
+                                    <Button Grid.RowSpan="2"
+                                            Grid.Column="2"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="End"
+                                            WidthRequest="40"
+                                            CornerRadius="22"
+                                            BackgroundColor="#CB3234"
+                                            Margin="0,15,0,0"
+                                            FontSize="17"
+                                            FontFamily="HELVETICA NEU"
+                                            FontAttributes="Bold"
+                                            Text="X"
+                                            x:Name="btnEliminar"
+                                            Clicked="btnEliminar_Clicked"/>
+                                    <Button Grid.RowSpan="2"
+                                            Grid.Column="2"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="End"
+                                            WidthRequest="40"
+                                            CornerRadius="22"
+                                            BackgroundColor="Green"
+                                            Margin="0,15,60,0"
+                                            FontFamily="HELVETICA NEU"
+                                            FontAttributes="Bold"
+                                            FontSize="11"
+                                            Text="OK"
+                                            x:Name="btnOk"
+                                            Clicked="btnOk_Clicked"
+                                            />
+                                </Grid>
+
+                            </ViewCell>
+                            
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Frame>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
+

@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{7296C92C-06D8-4C32-902C-642152B2B4F7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TDMPW_412_3P_PR02/MauiProgram.cs">
+    <Files>
+      <File FileName="TDMPW_412_3P_PR02/MainPage.xaml.cs" Line="10" Column="27" IsPinned="True" />
+      <File FileName="TDMPW_412_3P_PR02/MainPage.xaml" Line="16" Column="35" IsPinned="True" />
+      <File FileName="TDMPW_412_3P_PR02/Tarea.cs" Line="10" Column="31" IsPinned="True" />
+      <File FileName="TDMPW_412_3P_PR02/MauiProgram.cs" Line="19" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TDMPW_412_3P_PR02" expanded="True">
+            <Node name="TDMPW_412_3P_PR02" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="Images" expanded="True" />
+              </Node>
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.TDMPW__412__3P__PR02 PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B631A89A-FC19-4DE6-AB06-4672F6B525FF" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.B631A89A-FC19-4DE6-AB06-4672F6B525FF" />
+  <MultiItemStartupConfigurations />
+</Properties>

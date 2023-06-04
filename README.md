@@ -1,2 +1,2 @@
 # ToDoList_.NETMAUI
-To do list en .NET MAUI usando MVVM en lenguaje c#
+To do list in .NET MAUI using MVVM in c# language
